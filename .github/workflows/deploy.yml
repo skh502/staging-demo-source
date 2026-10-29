@@ -32,6 +32,8 @@ jobs:
         run: npm ci
 
       - name: Build Next.js
+        env:
+          NEXT_PUBLIC_BASE_PATH: /staging-demo-source
         run: npm run build
 
       - name: Upload site
